@@ -9,7 +9,7 @@ RUN ["mvn", "-e", "clean", "install"]
 
 # Le second stage utilise une image OpenJDK allégée sur laquelle on va déployer
 # Tomcat, le plugin compilé en premier stage, et paramétrer le tout
-FROM openjdk:8-jre-alpine
+FROM eclipse-temurin:8-jre-alpine
 
 # Déclaration du port d'écoute
 EXPOSE 8080
